@@ -11,7 +11,7 @@ import com.aqua_tech.gads2020.R
 import com.aqua_tech.gads2020.ui.main.TopLearner
 
 
-class TopLearnersAdapter(private val topLearners: MutableList<TopLearner>) :
+class TopLearnersAdapter(private val topLearners: List<TopLearner>) :
     RecyclerView.Adapter<TopLearnersAdapter.TopLearnerViewHolder>() {
     inner class TopLearnerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val ivTopLearner: ImageView = itemView.findViewById(R.id.iv_top_learner)

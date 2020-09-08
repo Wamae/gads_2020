@@ -12,10 +12,11 @@ import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aqua_tech.gads2020.R
 import com.aqua_tech.gads2020.ui.main.top_learners.TopLearnersAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_top_learners.*
 import kotlinx.android.synthetic.main.fragment_main.*
 
-
+@AndroidEntryPoint
 class MainFragment : Fragment() {
 
     override fun onCreateView(
