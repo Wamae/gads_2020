@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/notWhite"
     tools:context=".ui.main.MainFragment">
 
     <ScrollView
@@ -17,9 +16,11 @@
         app:layout_constraintVertical_bias="0">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_learning_leaders"
+            android:padding="@dimen/_16dp"
+            android:id="@+id/rv_top_learners"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:background="@color/notWhite"
+            android:layout_height="match_parent" />
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
