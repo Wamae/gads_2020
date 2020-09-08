@@ -30,11 +30,7 @@ class TopLearnersFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val topLearners = mutableListOf<TopLearner>()
-        topLearners.add(TopLearner("John Doe", 20, "Nigeria", "URL"))
-        topLearners.add(TopLearner("Jane Doe", 15, "Ghana", "URL"))
-
-        setupObservers()
+        getTopLearners()
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -42,7 +38,7 @@ class TopLearnersFragment : Fragment() {
         mainActivity = activity as MainActivity
     }
 
-    private fun setupObservers() {
+    private fun getTopLearners() {
         viewModel.getTopLearners().observe(viewLifecycleOwner, Observer {
             it?.let { resource ->
                 when (resource.status) {
