@@ -1,4 +1,4 @@
-package com.aqua_tech.gads2020.ui.main.top_learners
+package com.aqua_tech.gads2020.ui.main.top_skill_iq
 
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
@@ -9,16 +9,17 @@ import com.aqua_tech.gads2020.api.LeadersRepository
 import com.aqua_tech.gads2020.api.Resource
 import kotlinx.coroutines.Dispatchers
 
-class TopLearnersViewModel @ViewModelInject constructor(
+class TopSkillIqsViewModel @ViewModelInject constructor(
     private val repository: LeadersRepository,
     @Assisted private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
-    fun getTopLearners() = liveData(Dispatchers.IO) {
+
+    fun getTopSkillIq() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            val sortedTopLearners = repository.getTopLearners().toMutableList()
-                .sortedByDescending { it.hours }
-            emit(Resource.success(data = sortedTopLearners.toList()))
+            val sortedTopSkillIq = repository.getTopSkillIq().toMutableList()
+                .sortedByDescending { it.score }
+            emit(Resource.success(data = sortedTopSkillIq.toList()))
         } catch (exception: Exception) {
             emit(Resource.error(data = null, message = exception.message ?: "Error Occurred!"))
         }

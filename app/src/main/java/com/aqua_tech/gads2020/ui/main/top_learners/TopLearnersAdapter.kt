@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.aqua_tech.gads2020.R
-import com.aqua_tech.gads2020.ui.main.TopLearner
+import com.aqua_tech.gads2020.api.top_learner.TopLearner
 
 
 class TopLearnersAdapter(private val topLearners: List<TopLearner>) :
@@ -25,7 +25,7 @@ class TopLearnersAdapter(private val topLearners: List<TopLearner>) :
     ): TopLearnersAdapter.TopLearnerViewHolder {
         val context: Context = parent.context
         val inflater = LayoutInflater.from(context)
-        val topLearnerView: View = inflater.inflate(R.layout.item_top_learners, parent, false)
+        val topLearnerView: View = inflater.inflate(R.layout.item_top_learner, parent, false)
         return TopLearnerViewHolder(topLearnerView)
     }
 

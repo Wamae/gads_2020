@@ -1,4 +1,4 @@
-package com.aqua_tech.gads2020.ui.main.top_learners
+package com.aqua_tech.gads2020.ui.main.top_skill_iq
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,26 +11,26 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aqua_tech.gads2020.R
 import com.aqua_tech.gads2020.api.Status
-import com.aqua_tech.gads2020.api.top_learner.TopLearner
+import com.aqua_tech.gads2020.api.top_skill_iq.TopSkillIq
 import com.aqua_tech.gads2020.ui.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_top_learners.*
+import kotlinx.android.synthetic.main.fragment_top_skill_iqs.*
 
 @AndroidEntryPoint
-class TopLearnersFragment : Fragment() {
+class TopSkillIqsFragment : Fragment() {
 
     private lateinit var mainActivity: MainActivity
-    private val viewModel: TopLearnersViewModel by viewModels()
+    private val viewModel: TopSkillIqsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_top_learners, container, false)
+        return inflater.inflate(R.layout.fragment_top_skill_iqs, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        getTopLearners()
+        getTopSkillIqs()
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -38,13 +38,13 @@ class TopLearnersFragment : Fragment() {
         mainActivity = activity as MainActivity
     }
 
-    private fun getTopLearners() {
-        viewModel.getTopLearners().observe(viewLifecycleOwner, Observer {
+    private fun getTopSkillIqs() {
+        viewModel.getTopSkillIq().observe(viewLifecycleOwner, Observer {
             it?.let { resource ->
                 when (resource.status) {
                     Status.SUCCESS -> {
                         mainActivity.hideProgressBar()
-                        resource.data?.let { topLearners -> loadTopLearners(topLearners) }
+                        resource.data?.let { topSkillIqs -> loadTopSkillIqs(topSkillIqs) }
                     }
                     Status.ERROR -> {
                         mainActivity.hideProgressBar()
@@ -58,8 +58,8 @@ class TopLearnersFragment : Fragment() {
         })
     }
 
-    private fun loadTopLearners(topLearners: List<TopLearner>) {
-        rv_top_learners.layoutManager = LinearLayoutManager(activity)
-        rv_top_learners.adapter = TopLearnersAdapter(topLearners)
+    private fun loadTopSkillIqs(topSkillIq: List<TopSkillIq>) {
+        rv_top_skill_iqs.layoutManager = LinearLayoutManager(activity)
+        rv_top_skill_iqs.adapter = TopSkillIqAdapter(topSkillIq)
     }
 }

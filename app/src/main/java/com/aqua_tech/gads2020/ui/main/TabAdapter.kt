@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.aqua_tech.gads2020.R
 import com.aqua_tech.gads2020.ui.main.top_learners.TopLearnersFragment
+import com.aqua_tech.gads2020.ui.main.top_skill_iq.TopSkillIqsFragment
 
 
 class TabAdapter(private val mContext: Context, fragmentManager: FragmentManager) :
@@ -16,7 +17,7 @@ class TabAdapter(private val mContext: Context, fragmentManager: FragmentManager
                 TopLearnersFragment()
             }
             1 -> {
-                TopLearnersFragment()
+                TopSkillIqsFragment()
             }
             else -> TopLearnersFragment()
         }
