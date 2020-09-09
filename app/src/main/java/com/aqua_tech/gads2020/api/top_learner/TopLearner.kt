@@ -1,4 +1,4 @@
-package com.aqua_tech.gads2020.ui.main
+package com.aqua_tech.gads2020.api.top_learner
 
 data class TopLearner(
     val name: String,
