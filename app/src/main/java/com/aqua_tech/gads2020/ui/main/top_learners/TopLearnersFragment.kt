@@ -29,7 +29,8 @@ class TopLearnersFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_top_learners, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onResume() {
+        super.onResume()
         getTopLearners()
     }
 

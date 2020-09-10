@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/colorAccent</item>
     </style>
 
     <style name="AppTheme.ActionBar">
@@ -22,4 +23,23 @@
         <item name="android:background">@color/colorPrimary</item>
     </style>
 
+    <style name="CustomTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomEditTextStyle">
+        <item name="android:background">@drawable/et_style</item>
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:background">@drawable/gradient_bg</item>
+    </style>
+
+    <style name="Divider.Horizontal" parent="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+
+    </style>
 </resources>

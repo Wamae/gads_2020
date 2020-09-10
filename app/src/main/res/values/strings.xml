@@ -4,4 +4,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="learning_leaders">LEARNING LEADERS</string>
     <string name="skill_iq_leaders">SKILL IQ LEADERS</string>
+    <string name="submit">submit</string>
+    <string name="learderboard">LEARDERBOARD</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="project_link">Project on GITHUB (link)</string>
+    <string name="yes">Yes</string>
+    <string name="are_you_sure">Are you sure ?</string>
+    <string name="submission_successful">Submission Successful</string>
+    <string name="submission_not_successful">Submission not Successful</string>
+    <string name="gads">Google Africa \nDeveloper Scholarship</string>
+    <string name="project_submission">Project Submission</string>
 </resources>

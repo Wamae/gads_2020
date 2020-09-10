@@ -3,5 +3,8 @@
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FF9800</color>
+    <color name="white">#FFFFFF</color>
     <color name="notWhite">#0C8C2323</color>
+    <color name="success">#D551CC25</color>
+    <color name="error">#D5EC2727</color>
 </resources>
