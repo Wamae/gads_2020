@@ -9,4 +9,5 @@
     <dimen name="_42dp">40sp</dimen>
     <dimen name="_24sp">24sp</dimen>
     <dimen name="_100dp">100dp</dimen>
+    <dimen name="_20sp">20sp</dimen>
 </resources>
