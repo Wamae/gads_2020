@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/iv_success"
-        android:src="@drawable/ic_success"
+        android:src="@drawable/ic_alert"
         android:layout_width="@dimen/_100dp"
         android:layout_height="@dimen/_100dp"
         app:layout_constraintEnd_toEndOf="parent"
