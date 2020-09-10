@@ -13,10 +13,10 @@ import com.aqua_tech.gads2020.R
 import com.aqua_tech.gads2020.api.Status
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_submit.*
+import kotlinx.android.synthetic.main.activity_submit_project.*
 
 @AndroidEntryPoint
-class SubmitActivity : AppCompatActivity() {
+class SubmitProjectActivity : AppCompatActivity() {
 
     private lateinit var projectLink: String
     private lateinit var email: String
@@ -26,7 +26,7 @@ class SubmitActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_submit)
+        setContentView(R.layout.activity_submit_project)
         val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -123,7 +123,7 @@ class SubmitActivity : AppCompatActivity() {
         })
     }
 
-    fun clearFields() {
+    private fun clearFields() {
         et_first_name.setText("")
         et_last_name.setText("")
         et_email.setText("")
